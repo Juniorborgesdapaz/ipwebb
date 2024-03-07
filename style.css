@@ -1,4 +1,18 @@
 .div{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;    
+    font-weight: bold;  
+    margin: 0px;
+    padding: 2px;
+}
+.head{
+    
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+table{
+    padding: 1px;
+    border: 1px solid black;
 }
