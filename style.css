@@ -1,18 +1,42 @@
-.div{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;  
-    margin: 0px;
-    padding: 2px;
-}
-.head{
-    
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    text-align: center;
+body{
+margin: 0;
+padding: 0;
+      background-image: url('https://images6.alphacoders.com/934/934714.jpg');
+      background-position: fixed;
+      background-size: cover;
+      height: 90vh;
+      width: 90vh;
+  color: aliceblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
 
+  .div{
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  h2{
+    text-align: center;
+  }
+  .card {
+    position: relative; 
+    margin: 20px;
+    background-color: aliceblue;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px 2px black;
+    text-align: start;
+    opacity: 0.70;
+  }
+a{
+  text-decoration: none;
 }
-table{
-    padding: 1px;
-    border: 1px solid black;
+a:hover{
+  text-decoration: underline;
+}
+.cabeca{
+  text-align: center;
+
 }
