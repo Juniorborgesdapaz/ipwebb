@@ -19,41 +19,37 @@
         Nome: <br>
         <input type="text" name="nome" id=""><br>
         Sexo:<br>
-        <input type="radio" name="sexo"> masculino<br>
+        <input type="radio" name="sexo" > masculino<br>
         <input type="radio" name="sexo"> feminino<br>
 
         Email:<br>
         <input type="email" name="email"><br>
 
         interreses:<br>
-        <input type="checkbox" name="interreses">Cinema<br>
-        <input type="checkbox" name="interreses">Futbol<br>
-        <input type="checkbox" name="interreses">Formula 1<br>
-        <input type="checkbox" name="interreses">Jogos<br>
-        observacoes<br>
-        <input type="text" name="observacoes" rows="4" cols="50"><br>
+        <input type="checkbox" value="Futbol" name="interreses">Futbol<br>
+        <input type="checkbox" value="Cinema" name="interreses">Cinema<br>
+        <input type="checkbox" value="Formula 1" name="interreses">Formula 1<br>
+        <input type="checkbox" value="Jogos" name="interreses">Jogos<br>
+
+        Estado:<br>
+        <select name="estado" >
+            <option selected> Escolha estado</option>
+            <option value="PI">Piaui</option>
+            <option value="MA">maranhao</option>
+            <option value="CE">ceara</option>
+            <option value="SE">sergipe</option>
+            <option value="SP">são paulo</option>
+            <option value="AC">acre </option>
+            <option value="MG">minas gerais</option>
+            <option value="BH">bahia</option>
+        </select>
         
+        
+        <br>
 
-
-
-        <select id="estados">
-            <option value="estados">Selecione um estado</option> 
-        </select> <br>
-        <script>
-        fetch('estados.json')
-            .then(response => response.json())
-            .then(data => {
-                const select = document.getElementById('estados');
-                data.estados.forEach(estados => {
-                    const option = document.createElement('option');
-                    option.value = estados.uf;
-                    option.textContent = estados.nome;
-                    select.appendChild(option);
-                });
-            })
-            .catch(error => console.error('Não foi possível carregar os estados', error));
-        </script>
-        <br><br>
+        observacoes<br>
+        <textarea rows="5" cols="50" value=observacoes> </textarea><br>
+        <br>
 
 
         <input type="submit" value="Enviar">
