@@ -1,49 +1,69 @@
-body{
-margin: 0;
-padding: 0;
-      background-image: url('https://wallpaperswide.com/download/cyberpunk_2077_4k-wallpaper-3840x2160.jpg');
-      background-position: fixed;
-      background-size: cover;
-      height: 90vh;
-      width: 90vh;
-  color: rgb(0, 0, 0);
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://wallpaperswide.com/download/cyberpunk_2077_4k-wallpaper-3840x2160.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: white; 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+}
 
-  .div{
-    display: flex;
-    justify-content: center;
-  }
+.div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que os cards se ajustem conforme o espaço disponível da qtde de atividases */
+}
 
-  
-  h2{
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  .card {
-    position: relative; 
-    margin: 30px;
-    background-color: aliceblue;
-    width: 300px;
-    height: 350px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 2px 2px black;
-    text-align: start;
+h2 {
+  text-align: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-  }
-  .card:hover{
-    
-  }
-a{
+.card {
+  position: relative; 
+  margin: 30px;
+  background-color: aliceblue;
+  width: 100%; 
+  max-width: 300px; 
+  height: auto; 
+  border-radius: 10px;
+  box-shadow: 5px 5px 2px 2px black;
+  text-align: start;
+  padding: 20px; 
+}
+
+.card:hover {
+  box-shadow: 8px 8px 4px 2px black;
+}
+
+a {
   text-decoration: none;
+  color: rgb(107, 107, 210); 
 }
-a:hover{
+
+a:hover {
   text-decoration: underline;
+  color: rgb(21, 21, 95); 
 }
-.cabeca{
+
+.cabeca {
   text-align: center;
-  margin:50px ;
-
+  margin: 50px;
 }
 
+@media (max-width: 768px) {
+  .card {
+      max-width: 45%;
+  }
+}
 
+@media (max-width: 480px) {
+  .card {
+      /* celulartam */
+      max-width: 90%;
+  }
+}
+.atividades{
+  text-align: left;
+}
