@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinos Incríveis no Brasil</title>
+    <link rel="stylesheet" href="index.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,8 +58,8 @@
         .destino a {
             display: inline-block;
             text-decoration: none;
-            background-color: #007bff;
-            color: #fff;
+            background-color: rgb(48, 48, 186);
+            color: white;
             padding: 10px 15px;
             border-radius: 4px;
             margin: 10px;
@@ -66,72 +67,107 @@
         }
 
         .destino a:hover {
-            background-color: #0056b3;
+            background-color: rgb(43, 43, 152);
         }
-
         .link-voltar {
-            text-align: center;
-            margin-top: 20px;
+    text-align: center;
+    margin-top: 20px; 
+    background-color: blue; 
+    color: #f0f0f0; 
+    display: flex;
+    justify-content: center; 
+    gap: 10px; /* Espaço entre os elementos dentro do contêiner */
+    padding: 10px 15px; 
+    border-radius: 4px;
         }
 
-        .link-voltar a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
+.link-voltar a {
+    text-decoration: none; 
+    background-color: blue; 
+    color: rgb(255, 255, 255); 
+    font-weight: bold; 
+    display: inline-block; 
+    padding: 8px 12px;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+}
+
+.link-voltar a:hover {
+    background-color: #0056b3; /
+}
+        
+        
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="quem-somos.html">Quem somos</a>
+                <a href="contato.html">Contato</a>
+                <a href="destinos.html"> Destinos</a>
+                <a href="Pacote_viagens.html">Buscar pacotes de viagens</a>
+            </nav>
+        </header>
+       
 
     <h1>Destinos Incríveis no Brasil</h1>
+
 
     <div class="container-destinos">
         <div class="destino">
             <img src="https://magazine.zarpo.com.br/wp-content/uploads/2016/09/capa-mag_pontos-turisticos-rio-de-janeiro-1.jpg">
             <p>Rio de Janeiro</p>
-            <a href="conficomp.html">É esse lugar!</a>
+            <a href="conficomp.html">Confirmar</a>
         </div>
         
         <div class="destino">
             <img src="https://cdn.myside.com.br/base/d1e/b49/851/jardim-botanico-bairro-curitiba.jpg">
             <p>Curitiba</p>
-            <a href="conficomp.html">É esse lugar!</a>
+            <a href="conficomp.html">Confirmar</a>
         </div>
 
         <div class="destino">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUOKS95sZTed7lDteYZWHav6g_7_Yqg86pyUZMpq_mPw&s">
             <p>Florianópolis</p>
-            <a href="conficomp.html">É esse lugar!</a>
+            <a href="conficomp.html">Confirmar</a>
         </div>
 
         <div class="destino">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Praia_da_Ponta_Negra_%28Manaus%29.jpg/1200px-Praia_da_Ponta_Negra_%28Manaus%29.jpg">
             <p>Manaus</p>
-            <a href="conficomp.html">É esse lugar!</a>
+            <a href="conficomp.html">Confirmar</a>
         </div>
 
         <div class="destino">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfOCWYDFUk6D583nXj6ERbgPFGrTa5LLlYM9S9QG6cPQ&s">
             <p>Belo Horizonte</p>
-            <a href="conficomp.html">É esse lugar!</a>
+            <a href="conficomp.html">Confirmar</a>
         </div>
 
         <div class="destino">
             <img src="https://nowboarding.com.br/wp-content/uploads/2023/08/12-teresina1-fernando-chaves.jpg">
             <p>Piauí</p>
-            <a href="conficomp.html">É esse lugar!</a>
+            <a href="conficomp.html">Confirmar</a>
         </div>
 
         <div class="destino">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxZLEv3abvtX5KYmp6pwdvdcxVfg_yInf5aAWCiU1awQ&s">
             <p>Sergipe</p>
-            <a href="conficomp.html">É esse lugar!</a>
+            <a href="conficomp.html">Confirmar</a>
         </div>
     </div>
 
     <div class="link-voltar">
         <a href="Pacote_viagens.html">Voltar</a>
+        <a href="conficomp.html">Confirmar</a>
     </div>
+
+    <footer>
+        <h4>Todos os direitos reservados</h4>
+    </footer>
 
 </body>
 </html>
