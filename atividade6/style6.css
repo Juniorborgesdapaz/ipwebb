@@ -1,0 +1,30 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    width: 900px;
+    height: 900px;
+    display: inline-block;
+    text-align: center;
+    padding: 1px;
+}
+.menu{
+    background-color: gray;
+    border: 5px solid black;
+
+}
+.corpo{
+    background-color: yellow;
+    border: 5px solid green;
+}
+.rodape{
+    border: solid;
+    background-color: rgb(96, 96, 210);
+    border-width: 5px 5px 5px 5px;
+    border-color: black brown yellow white;
+
+}
+.copy{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
