@@ -1,0 +1,12 @@
+.pessoa{
+    color: red;
+}
+.pessoa[data-idade='30']{
+    color: blue;
+}
+.pessoa ::after{
+    content: 'antes';
+}
+.pessoa ::before{
+    content: 'depois';
+}
