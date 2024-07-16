@@ -1,22 +1,18 @@
-* {
+
+.box{
+    color: aliceblue;
+    background-image: url("https://cdn.ome.lt/legacy/images/galerias/Batman-em-20-momentos/Batman-por-Marshall-Rogers.jpg");
+    width: 400px;
+    height: 400px;
+    margin: 50px;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.gradient-box {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(45deg, red, green, blue, purple);
-    margin-bottom: 20px;
+.box h1{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255,255,255);
+    text-align: center;
 }
 
 .shadow-container {
@@ -26,17 +22,32 @@ body {
 
 .shadow-box {
     width: 200px;
-    height: 100px;
-    background-color: pink;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    background-color: rgb(255, 0, 43);
+    box-shadow: 15px 15px 20px rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-.shadow-box:nth-child(2) {
-    background-color: lightyellow;
+.gradiente{
+    background: linear-gradient( to top left, yellow,red);
+    height: 300px;
+    width: 300px;
+    margin: 50px;
+}
+
+.gradient{
+    background: linear-gradient( to bottom left, yellow,red,blue,green);
+    height: 300px;
+    width: 300px;
+    margin: 50px;
+}
+
+.radial{
+    height: 300px;
+    width: 300px;
+    background: radial-gradient( red, yellow,green);
 }
