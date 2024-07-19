@@ -5,22 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
-    <script type="text/javascript">
-        function mostrarvalor(componente){
-            var valor= componente.getAttribute(data-idade);
-            alert(valor)
-        }
-        
-    </script>
 </head>
 <body>
-    <h1>info de pessoas </h1>
-   <ul>
-    <li class="pessoa" onclick="mostrarvalor(this)" data-idade="20"> junior</li>
-    <li class="pessoa"  onclick="mostrarvalor(this)" data-idade="30"> joao</li>
-    <li class="pessoa" onclick="mostrarvalor(this)"  data-idade="40">julia</li>
-   </ul>
-
+    <h1>Info de Pessoas</h1>
+    <ul>
+        <li class="pessoa" data-nome="junior" data-idade="20" data-cpf="111"></li>
+        <li class="pessoa" data-nome="Islanio" data-idade="30" data-cpf="222"></li>
+        <li class="pessoa" data-nome="Victor" data-idade="40" data-cpf="333"></li>
+    </ul>
 </body>
 </html>

@@ -1,12 +1,14 @@
-.pessoa{
+.pessoa {
     color: red;
+    list-style-type: disc;
+    margin-bottom: 10px;
 }
-.pessoa[data-idade='30']{
+
+.pessoa[data-idade='30'] {
     color: blue;
 }
-.pessoa ::after{
-    content: 'antes';
-}
-.pessoa ::before{
-    content: 'depois';
+
+.pessoa::before {
+    content: 'Nome: ' attr(data-nome) ' - Idade: ' attr(data-idade) ' Anos - C.P.F: ' attr(data-cpf);
+    color: inherit;
 }
