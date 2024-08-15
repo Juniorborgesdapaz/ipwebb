@@ -1,0 +1,28 @@
+.container{
+    background-color: rgb(184, 180, 180);
+    text-align: center;
+}
+.card-profile {
+    background-color: white;
+    max-width: 100%;
+    width: 100vw; /* Aumenta o tamanho base do card */
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+.card-profile img {
+    width: 70vw; /* Aumenta o tamanho da imagem */
+    height: 70vh;
+    object-fit: cover;
+    margin: 10px auto;
+}
+.card-profile h4 {
+    margin-top: 10px;
+}
+.card-profile table {
+    margin: 20px 0;
+}
+.card-profile .btn {
+    width: 100%;
+}
