@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Produtos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icones do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .navbar .btn {
+            border-radius: 0;
+            background-color: #0275d8;
+            color: white;
+            margin-right: 5px;
+        }
+
+        .navbar .btn:hover {
+            background-color: #025aa5;
+        }
+
+        .btn-primary, .btn-secondary {
+            margin-right: 5px;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .badge {
+            font-size: 1rem;
+        }
+
+        /* Estilo da barra superior */
+        .navbar {
+            padding: 0.5rem 1rem;
+        }
+
+        .card-header {
+            font-weight: bold;
+            font-size: 1.25rem;
+            background-color: #f7f7f7;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .form-control {
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            border-radius: 0;
+        }
+
+        .table td button {
+            margin-left: 5px;
+        }
+
+        .container {
+            max-width: 95%;
+            margin: auto;
+        }
+
+        /* Estilo para garantir responsividade */
+        @media (max-width: 768px) {
+            .navbar .btn {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-light bg-light mb-3">
+        <div class="container-fluid">
+            <button class="btn">Pedidos Recentes</button>
+            <button class="btn">Enviar Cliente</button>
+            <button class="btn">Receber Pagamento</button>
+            <button class="btn">Todos os Pedidos</button>
+            <button class="btn">Novo pedido</button>
+            <button class="btn">Página Principal</button>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Pesquisa de Produtos
+            </div>
+            <div class="card-body">
+                <form class="mb-3">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Descrição">
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button type="button" class="btn btn-primary">
+                                <i class="bi bi-search"></i> Pesquisar
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="bi bi-arrow-clockwise"></i> Recarregar
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                <i class="bi bi-file-earmark-plus"></i> Novo
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Tabela de Resultados -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descrição</th>
+                            <th>Situação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Pizza</td>
+                            <td><span class="badge bg-success">Ativo</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Refrigerante</td>
+                            <td><span class="badge bg-success">Ativo</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Cajuína</td>
+                            <td><span class="badge bg-secondary">Inativo</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Borda</td>
+                            <td><span class="badge bg-success">Ativo</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (com Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
