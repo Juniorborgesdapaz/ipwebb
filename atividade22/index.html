@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js.js"></script>
 </head>
 <body>
-    <h1>teste de javascript</h1>
-    <script>
-        function minhafuncao(arg1,arg2,arg3){
-            var raiz = Math.sqrt(arg1)
-            var raiz = Math.sqrt(arg2)
-            var raiz = Math.sqrt(arg3)
-        }
-        function escrever(){
-            document.write(arg1)
-            document.write(arg2)
-            document.write(arg3)
-        }
-    </script>
+    <h1>Teste de JavaScript</h1>
+   
+   
 
-    <button onclick="escrever()"> clica aqui</button>
+    <button onclick="minhafuncao(25)">Raiz de 25</button>
+    <button onclick="minhafuncao(36)">Raiz de 36</button>
+    <button onclick="minhafuncao(49)">Raiz de 49</button>
+
+    <button onclick="contador()"> numero
+        <div id="resultado">  </div>
+    </button>
+    
+    </a>
 </body>
 </html>
