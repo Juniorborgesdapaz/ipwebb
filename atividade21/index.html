@@ -72,31 +72,52 @@
     </style>
 </head>
 <body>
-    <!-- Barra de Navegação -->
-    <nav class="navbar navbar-light bg-light mb-3">
-        <div class="container-fluid">
-            <button class="btn">Pedidos Recentes</button>
-            <button class="btn">Enviar Cliente</button>
-            <button class="btn">Receber Pagamento</button>
-            <button class="btn">Todos os Pedidos</button>
-            <button class="btn">Novo pedido</button>
-            <button class="btn">Página Principal</button>
-        </div>
-    </nav>
+
+<!-- Barra de Navegação -->
+<nav class="navbar navbar-light bg-light mb-4">
+    <div class="container-fluid d-flex gap-2">
+        <button class="btn d-inline-flex align-items-center">
+            <i class="bi bi-clock-history me-1"></i> Pedidos Recentes
+        </button>
+        <button class="btn d-inline-flex align-items-center">
+            <i class="bi bi-send me-1"></i> Enviar Cliente
+        </button>
+        <button class="btn d-inline-flex align-items-center">
+            <i class="bi bi-currency-dollar me-1"></i> Receber Pagamento
+        </button>
+        <button class="btn d-inline-flex align-items-center">
+            <i class="bi bi-list-check me-1"></i> Todos os Pedidos
+        </button>
+        <button class="btn d-inline-flex align-items-center">
+            <i class="bi bi-plus-circle me-1"></i> Novo Pedido
+        </button>
+        <button class="btn d-inline-flex align-items-center">
+            <i class="bi bi-house-door me-1"></i> Página Principal
+        </button>
+    </div>
+</nav>
+
 
     <!-- Conteúdo Principal -->
     <div class="container">
         <div class="card">
-            <div class="card-header">
-                Pesquisa de Produtos
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Pesquisa de Produtos</span>
+                <button type="button" class="btn-close" aria-label="Close"></button>
             </div>
             <div class="card-body">
                 <form class="mb-3">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <input type="text" class="form-control" placeholder="Descrição">
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <!-- Título da Descrição -->
+                            <label for="descricao" class="form-label">Descrição</label>
+                            <!-- Barra de entrada -->
+                            <input type="text" id="descricao" class="form-control" placeholder="Digite a descrição do produto">
                         </div>
-                        <div class="col-md-4 text-end">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-end">
+                            <!-- Botões abaixo da barra de entrada -->
                             <button type="button" class="btn btn-primary">
                                 <i class="bi bi-search"></i> Pesquisar
                             </button>
@@ -109,6 +130,24 @@
                         </div>
                     </div>
                 </form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <!-- Registro por página -->
+                        <label for="registrosPorPagina" class="form-label">Registros por página:</label>
+                        <select id="registrosPorPagina" class="form-select">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <!-- Busca de produtos -->
+                        <label for="buscaProduto" class="form-label">Buscar Produto:</label>
+                        <input type="text" id="buscaProduto" class="form-control" placeholder="Digite o nome do produto">
+                    </div>
+                </div>
+                
 
                 <!-- Tabela de Resultados -->
                 <table class="table table-bordered">
@@ -126,8 +165,17 @@
                             <td>Pizza</td>
                             <td><span class="badge bg-success">Ativo</span></td>
                             <td>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar Produto">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="detalhes">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                                
+
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="popover" data-bs-content="Tem certeza que deseja remover este item?">
+                                    <i class="bi bi-trash"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr>
@@ -135,8 +183,15 @@
                             <td>Refrigerante</td>
                             <td><span class="badge bg-success">Ativo</span></td>
                             <td>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar Produto">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="detalhes">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="popover" data-bs-content="Tem certeza que deseja remover este item?">
+                                    <i class="bi bi-trash"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr>
@@ -144,8 +199,15 @@
                             <td>Cajuína</td>
                             <td><span class="badge bg-secondary">Inativo</span></td>
                             <td>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar Produto">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="detalhes">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="popover" data-bs-content="Tem certeza que deseja remover este item?">
+                                    <i class="bi bi-trash"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr>
@@ -153,8 +215,15 @@
                             <td>Borda</td>
                             <td><span class="badge bg-success">Ativo</span></td>
                             <td>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar Produto">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="detalhes">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="popover" data-bs-content="Tem certeza que deseja remover este item?">
+                                    <i class="bi bi-trash"></i>
+                                </button>
                             </td>
                         </tr>
                     </tbody>
@@ -164,7 +233,21 @@
     </div>
 
     <!-- Bootstrap JS (com Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Inicializar Tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    
+        // Inicializar Popovers
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+    
+
 </body>
 </html>
