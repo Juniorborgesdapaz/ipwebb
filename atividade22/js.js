@@ -9,3 +9,12 @@ function contador() {
     var resultadodiv =document.getElementById("resultado");
     
 }
+    
+        function showTextInModal() {
+            var text = prompt("Digite o texto para exibir no modal:");
+            if (text) {
+                document.getElementById('modalBodyContent').innerText = text;
+                var myModal = new bootstrap.Modal(document.getElementById('textModal'));
+                myModal.show();
+            }
+        }
